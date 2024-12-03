@@ -1,4 +1,14 @@
-from util import get_input
+def get_input(file):
+    a = []
+    b = []
+    with open(file) as f:
+        for line in f.readlines():
+            values = line.split("   ")
+            a.append(int(values[0]))
+            b.append(int(values[1]))
+
+    return a, b
+
 a,b = get_input("input.txt")
 
 def part1(a, b):

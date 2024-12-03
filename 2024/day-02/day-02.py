@@ -1,4 +1,10 @@
-from util import get_input
+def get_input(file):
+    values = []
+    with open(file) as f:
+        for line in f.readlines():
+            values.append([int(x) for x in line.split(" ")])
+    return values
+
 reports = get_input("input.txt")
 #reports = [[7, 6, 4, 2, 1], [1, 2, 7, 8, 9], [9, 7, 6, 2, 1], [1, 3, 2, 4, 5], [8, 6, 4, 4, 1], [1, 3, 6, 7, 9]]
 
